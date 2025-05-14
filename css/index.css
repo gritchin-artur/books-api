@@ -1,12 +1,89 @@
-*,
-*::before,
-*::after {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    color: #333;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #565454;
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#input {
+    padding: 0.75rem 1rem;
+    width: 60%;
+    max-width: 500px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #1e88e5;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.book-container:hover {
+    transform: translateY(-5px);
+}
+
+.book-img {
+    width: 140px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #eee;
+}
+
+.book-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.book-publish-year,
+.book-language,
+.book-title-of-book {
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 0.25rem 0;
 }
