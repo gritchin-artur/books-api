@@ -39,12 +39,12 @@ export const updateBooksDom = (booksDomExists, books) => {
         bookEl.querySelector('.book-img').src = book.cover_i
             ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
             : 'https://fortune.com/img-assets/wp-content/uploads/2024/03/Default-book.jpg?w=768&q=75';
-        bookEl.querySelector('.book-publish-year').innerText =
-            `First publish year: ${book.first_publish_year || 'N/A'}`;
-        bookEl.querySelector('.book-language').innerText =
-            `Language: ${book.language || 'N/A'}`;
-        bookEl.querySelector('.book-title-of-book').innerText =
-            `Book title: ${book.title || 'Untitled'}`;
+        bookEl.querySelector('.book-publish-year').innerHTML =
+            `<span class="label">📅 First Published:</span> ${book.first_publish_year || 'N/A'}`;
+        bookEl.querySelector('.book-language').innerHTML =
+            `<span class="label">🌐 Language:</span> ${book.language || 'N/A'}`;
+        bookEl.querySelector('.book-title-of-book').innerHTML =
+            `<span class="label">📖 Title:</span> ${book.title}`;
     });
 
     if (bookElements.length > books.length) {

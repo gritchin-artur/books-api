@@ -22,10 +22,9 @@ export const submitHandler = async (e) => {
             dom.result.append(numFound, booksComponents(books.docs));
         } else {
             dom.result.querySelector('.number-found').innerText =
-                `Was found ${books.numFound} books`;
+                `Was found ${books.numFound} authors`;
             updateBooksDom(booksDomExists, books.docs);
         }
-
     } catch (error) {
         dom.error.innerText = 'Ooops something went wrong';
     }

@@ -19,15 +19,15 @@ export const booksComponents = (books) => {
 
         const bookPublishYear = document.createElement('p');
         bookPublishYear.className = 'book-publish-year';
-        bookPublishYear.innerText = `First publish year: ${book.first_publish_year}`;
+        bookPublishYear.innerHTML = `<span class="label">📅 First Published:</span> ${book.first_publish_year}`;
 
         const bookLanguage = document.createElement('p');
         bookLanguage.className = 'book-language';
-        bookLanguage.innerText = `Language: ${book.language}`;
+        bookLanguage.innerHTML = `<span class="label">🌐 Language:</span> ${book.language}`;
 
         const bookTitleOfBook = document.createElement('p');
         bookTitleOfBook.className = 'book-title-of-book';
-        bookTitleOfBook.innerText = `Book title: ${book.title}`;
+        bookTitleOfBook.innerHTML = `<span class="label">📖 Title:</span> ${book.title}`;
 
         bookContainer.append(
             bookAuthor,
