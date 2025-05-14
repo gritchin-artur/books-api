@@ -17,7 +17,7 @@ export const submitHandler = async (e) => {
         numFound.className = 'number-found';
 
         if (!booksDomExists) {
-            numFound.innerText = `Was found ${books.numFound} books`;
+            numFound.innerText = `Was found ${books.numFound} authors`;
 
             dom.result.append(numFound, booksComponents(books.docs));
         } else {
@@ -26,7 +26,6 @@ export const submitHandler = async (e) => {
             updateBooksDom(booksDomExists, books.docs);
         }
 
-        console.log(books.docs);
     } catch (error) {
         dom.error.innerText = 'Ooops something went wrong';
     }
